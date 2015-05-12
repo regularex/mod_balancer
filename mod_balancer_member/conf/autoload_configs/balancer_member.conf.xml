@@ -1,0 +1,7 @@
+<configuration name="balancer_member.conf">
+  <settings>
+    <param name="odbc-dsn" value="dsn:username:password"/>
+    <param name="is_webservice" value="0"/>
+    <param name="webservice_url" value="http://localhost:8080/ha_update"/>
+  </settings>
+</configuration>

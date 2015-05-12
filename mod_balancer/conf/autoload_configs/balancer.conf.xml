@@ -1,0 +1,14 @@
+<configuration name="balancer.conf">
+    <settings>
+        <param name="odbc-dsn" value="dsn:username:password"/>
+        <param name="cluster-id" value="1"/>
+        <param name="strategy" value="sessions"/>
+        <param name="last-checkin-seconds" value="30"/>
+        <param name="cpu-idle-threshold" value="10"/>
+        <param name="default-member" value="sip.mydomain.com"/>
+    </settings>
+    <cluster-members>
+        <cluster-member ip-addr="192.168.0.2" hostname="sip1.mydomain.com" call-timeout="20" bypass-media="true" server-role="media" max-sessions="500" cpu-idle-threshold="10"/>
+        <cluster-member ip-addr="192.168.0.3" hostname="sip2.mydomain.com" call-timeout="20" bypass-media="true" server-role="media" max-sessions="500" cpu-idle-threshold="10"/>
+    </cluster-members>
+</configuration>
